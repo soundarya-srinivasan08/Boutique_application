@@ -1,7 +1,4 @@
-
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -11,18 +8,28 @@ import { FooterComponent } from './components/footer/footer.component';
 // import { CartComponent } from './components/cart/cart.component';
 import { BridalwearComponent } from './components/bridalwear/bridalwear.component';
 import { WesternwearComponent } from './westernwear/westernwear.component';
+import { NgModule } from '@angular/core';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 
+export const routes: Routes = [
+{path:"",component: HomeComponent},
+{path:'navbar',component :NavbarComponent},
+{path:'footer', component :FooterComponent},
+// {path:'cart',component: CartComponent},
+{path:'login',component: LoginComponent},
+{path:'registration',component: RegistrationComponent},
+{path:'casualwear',component: CasualwearComponent},
+{path:'bridalwear',component: BridalwearComponent},
+{path: 'westernwear', component: WesternwearComponent},
+{path: 'aboutus', component: AboutusComponent},
+{path: 'contact', component:ContactComponent }
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,FormsModule,NavbarComponent,ContactComponent,AboutusComponent,FooterComponent,HomeComponent,LoginComponent,RegistrationComponent,CasualwearComponent,BridalwearComponent,WesternwearComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
-export class AppComponent {
-  title = 'frontend';
-}
+];
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+
+  export class AppRoutingModule{}

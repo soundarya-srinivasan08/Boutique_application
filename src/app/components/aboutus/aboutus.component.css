@@ -1,0 +1,21 @@
+.container {
+    background-color: #fae4e8;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  h2 {
+    font-family: 'Cursive', serif;
+    color: #d63384;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  img {
+    border: 3px solid #d63384;
+  }
+  

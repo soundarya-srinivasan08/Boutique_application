@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Filters Column -->
+    <div class="col-md-3">
+      <h4>Filters</h4>
+
+      <!-- Price Range -->
+      <div class="filter-section">
+        <label for="priceRange">Price Range</label>
+        <input type="range" id="priceRange" min="100" max="10000" />
+      </div>
+
+      <!-- Sizes -->
+      <div class="filter-section">
+        <h5>Sizes</h5>
+        <div *ngFor="let size of sizes">
+          <input type="checkbox" /> {{ size }}
+        </div>
+      </div>
+
+      <!-- Colors -->
+      <div class="filter-section">
+        <h5>Colors</h5>
+        <div *ngFor="let color of colors">
+          <input type="checkbox" /> {{ color }}
+        </div>
+      </div>
+
+      <!-- Age Groups -->
+      <div class="filter-section">
+        <h5>Age Group</h5>
+        <div *ngFor="let ageGroup of ageGroups">
+          <input type="checkbox" /> {{ ageGroup }}
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="filter-section">
+        <h5>Categories</h5>
+        <div *ngFor="let category of categories">
+          <input type="checkbox" /> {{ category }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Column -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let product of filteredProducts">
+          <div class="card">
+            <img
+              [src]="product.image"
+              alt="{{ product.name }}"
+              class="card-img-top img-fluid"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">Price: ₹{{ product.price }}</p>
+              <p class="card-text">Size: {{ product.size }}</p>
+              <p class="card-text">Color: {{ product.color }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

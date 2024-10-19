@@ -1,0 +1,30 @@
+.container {
+    background-color: #fae4e8;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  h2 {
+    font-family: 'Cursive', serif;
+    color: #d63384;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #333;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #d63384;
+    border-color: #d63384;
+  }
+  

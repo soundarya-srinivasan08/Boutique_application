@@ -1,0 +1,30 @@
+*{
+  font-family: 'Cursive', serif;
+  
+}
+.login-container{
+  height: 100vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    
+    height: 100vh;
+    background-color: #abd1f7;
+  }
+  
+  
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    background-color:  #fbe3e8
+  }
+
+  /* Placeholder text size (with Bootstrap) */
+  input::placeholder {
+    font-size: 0.85rem; /* Adjust this size as needed */
+  }

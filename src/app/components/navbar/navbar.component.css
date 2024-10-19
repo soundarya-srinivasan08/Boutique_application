@@ -1,0 +1,14 @@
+.stylish-text {
+    font-family: 'Cursive', serif; 
+    font-style: italic;/* Stylish script font */
+    font-size: 30px;
+    color: #333;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(245, 249, 249, 0.5); /* Shadow for glowing effect */
+    letter-spacing: 2px;
+    padding: 10px;
+    background: linear-gradient(45deg, #eae4de, #e52e71);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1.5s infinite alternate;
+}
+
