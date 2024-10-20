@@ -52,15 +52,16 @@
               [src]="product.image"
               alt="{{ product.name }}"
               class="card-img-top img-fluid"
+              style="background: #fae4e8"
             />
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
               <p class="card-text">Price: ₹{{ product.price }}</p>
               <p class="card-text">Size: {{ product.size }}</p>
               <p class="card-text">Color: {{ product.color }}</p>
-              <a class="btn btn-dark btn-lg" style="width: 250px"
-                >Add to cart</a
-              >
+              <button class="btn btn-dark" (click)="addToCart(product)">
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>

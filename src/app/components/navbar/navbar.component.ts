@@ -32,7 +32,9 @@ navigateToaboutus(){
 navigateTocontact(){
   this.router.navigate(['/contact']);
 }
-
+ cart(){
+  this.router.navigate(['/cart']);
+ }
 
 
 }

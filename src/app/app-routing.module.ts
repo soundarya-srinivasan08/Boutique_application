@@ -11,13 +11,14 @@ import { WesternwearComponent } from './westernwear/westernwear.component';
 import { NgModule } from '@angular/core';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 export const routes: Routes = [
 {path:"",component: HomeComponent},
 {path:'navbar',component :NavbarComponent},
 {path:'footer', component :FooterComponent},
-// {path:'cart',component: CartComponent},
+ {path:'cart',component: CartComponent},
 {path:'login',component: LoginComponent},
 {path:'registration',component: RegistrationComponent},
 {path:'casualwear',component: CasualwearComponent},

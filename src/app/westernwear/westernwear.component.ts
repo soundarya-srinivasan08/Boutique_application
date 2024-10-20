@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-westernwear',
   standalone: true,
@@ -15,7 +16,7 @@ sizes: string[] = ['S', 'M', 'L', 'XL'];  // Example size data
 colors: string[] = ['Red', 'Blue', 'Green', 'White'];  // Example color data
 ageGroups: string[] = ['18-25', '26-35', '36-45'];  // Example age group data
 categories: string[] = ['Bridal Wear', 'Casual Wear', 'Western Wear'];  // Example categories data
-constructor() {}
+
 
 
 filteredProducts: any[] = [
@@ -92,7 +93,13 @@ filteredProducts: any[] = [
   }
 ];  // Example products data
 
+constructor(private cartservice: CartService) {}  // Inject CartService
 
+  // Add product to cart
+  addToCart(product: any) {
+    this.cartservice.addToCart(product);
+    alert(`${product.name} added to cart!`);
+  }
 
 
 
